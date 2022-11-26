@@ -25,6 +25,6 @@ app.use('/location', locationDetails);
 app.use('/bus', busDetails);
 app.use('/email', emailService)
 //Initialize the sever
-app.listen(5000, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log('server listening on port:5000');
 });
