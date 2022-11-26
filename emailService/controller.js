@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
             text: text
           };
        EmailService.sendEmail(mailOptions)
+       res.status(200).json({"message":"mail send successfully"})
         
     }catch(err){
         res.status(400).json({"message":err})
