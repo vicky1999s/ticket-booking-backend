@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
         const text = body.replace('{',"").replace('}',"").replaceAll("\"", "");
         console.log(text)
         var mailOptions = {
-            from: 'vsv9071@gmail.com',
+            from: process.env.MAIL_ID,
             to: emailBody.email_id,
             subject: 'Ticket booking confirmation',
             text: text
