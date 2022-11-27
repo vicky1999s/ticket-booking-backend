@@ -13,4 +13,5 @@ const EmailBodySchema = mongoose.Schema({
     total_fare: {type: Number, required: true},
 }) 
 
-module.exports = mongoose.model('emailbody',  EmailBodySchema)
+const EmailBody = mongoose.model('emailbody',  EmailBodySchema)
+module.exports = EmailBody

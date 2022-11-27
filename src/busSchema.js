@@ -15,4 +15,5 @@ const busSchema = mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('busdetail', busSchema)
+const BusDetails = mongoose.model('busdetail', busSchema)
+module.exports = BusDetails
