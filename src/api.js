@@ -23,7 +23,7 @@ mongoose.connect(URI, {useNewUrlParser: true, useUnifiedTopology: true})
         .catch((error) => {console.log(error)})
 
 
-router.get('/get', (req, res)=>{res.json({"message":"working"})})
+router.get('/', (req, res)=>{res.json({"message":"working"})})
 
 
 
@@ -101,7 +101,7 @@ router.post('/email', async (req, res) => {
 
 
 
-app.use('/.netlify/functions/server', router)
+app.use('/.netlify/functions/api', router)
 
 //Initialize the sever
 // app.listen(process.env.PORT || 8080, () => {
